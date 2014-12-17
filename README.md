@@ -90,4 +90,16 @@ Application-context xml
 </beans>
 It is bean file that calls the class dynamically according to input and output format. NOTE: Plase make sure in bean id will be always in the form of <inputFileFormat_lowerCase +”to”+OutputFileFormat_lowerCase>
 
+Some libraries used 
+---------------
+| Name                      | Artifact id                                | version  | Description                    |
+| :------------------------:|:------------------------------------------:| -------: | ------------------------------:|
+| org.springframework       | pring-context, spring-web and spring-beans | 3.1.0    | Spring                         |
+| org.apache.cxf            | cxf-rt-frontend-jaxrs                      | 2.7.0    | CXF                            |
+| org.docx4j                | docx4j                                     | 3.1.0    | for converting DOC to PDF      |
+| com.google.code.gson      | gson                                       | 1.7.0    | Google json library            |
+| net.sf.opencsv            | opencsv                                    |  1.8     | Reading CSV                    |
+| com.thoughtworks.xstream  | xstream                                    | 1.4.7    | For crearting and reading xml  |
 
+
+For more detail please check pom.xml file having maven decencies. 
