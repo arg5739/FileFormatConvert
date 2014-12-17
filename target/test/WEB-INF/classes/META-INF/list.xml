@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<list>
+	<from id="text">
+		<to>pdf</to>
+		<to>doc</to>
+	</from>
+	<from id="csv">
+		<to>pdf</to>
+		<to>doc</to>
+		<to>doc3</to>
+	</from>
+</list>
