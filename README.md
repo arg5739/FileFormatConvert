@@ -1,12 +1,49 @@
-FileFormatConvertWS
-===================
+ ** Currently API take convert the doc to pdf and Csv to xml. But it is easy to add new formats with minimal changes to the code 
+**
 
-Convert the file format. 
+
+File Format Converter
+=======================================
 It is an API that accepts file in one format, and outputs the data in a different format. 
 
-Currently API take convert the doc to pdf and Csv to xml. But it is easy to add new formats with minimal changes to the code 
 
-Following files need to be change in order to incorporate the new file format converters
+
+
+Folder Contents
+---------------
+
+* `com/in/convertClasses/` - All of the converter code
+* `com/in/webservices` - All web services  
+
+
+Usage
+---------------
+Run on Tomcat server.
+It will run index.jsp 
+You can select the input and output file format and upload the file. It will download the converted file. 
+
+
+Where to Get Help
+---------------
+
+ Email: arg5739@rit.edu
+
+Supported Formats
+---------------
+DOC to PDF
+Csv to XML
+ 
+
+Format Wish List
+---------------
+PDF to DOC
+Text to PDF
+Pdf to audio <Working on right now>
+  
+
+The Concept
+---------------
+This is basically an API where you can hook up the converter of your choice and make it available for others with minimum code changes. For adding new converter add class in appropriate directory and update two xml files. Namely List.xml and application-context.xml
 List.xml 
 <?xml version="1.0"?>
 <list>
@@ -28,8 +65,7 @@ List.xml
 	
 </list>
 
-Application-context.xml
-this is the bean file. 
+Application-context xml 
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -52,3 +88,6 @@ this is the bean file.
 
 
 </beans>
+It is bean file that calls the class dynamically according to input and output format. NOTE: Plase make sure in bean id will be always in the form of <inputFileFormat_lowerCase +”to”+OutputFileFormat_lowerCase>
+
+
